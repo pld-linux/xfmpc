@@ -1,12 +1,12 @@
 Summary:	A graphical GTK+ MPD client focusing on low footprint
 Summary(pl.UTF-8):	Graficzny klient MPD oparty na GTK+
 Name:		xfmpc
-Version:	0.2.1
+Version:	0.2.2
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
 Source0:	http://www.xfce.org/archive/src/apps/xfmpc/0.2/%{name}-%{version}.tar.bz2
-# Source0-md5:	6e8a4acdb03919ac9ec13e0cad84a22e
+# Source0-md5:	e4e198850c2467c47783969ac9c16ec0
 URL:		http://www.xfce.org/projects/xfmpc/
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.18

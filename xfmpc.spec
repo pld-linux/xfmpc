@@ -1,22 +1,22 @@
 Summary:	A graphical GTK+ MPD client focusing on low footprint
 Summary(pl.UTF-8):	Graficzny klient MPD oparty na GTK+
 Name:		xfmpc
-Version:	0.2.2
-Release:	3
+Version:	0.3.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications/Sound
-Source0:	http://www.xfce.org/archive/src/apps/xfmpc/0.2/%{name}-%{version}.tar.bz2
-# Source0-md5:	e4e198850c2467c47783969ac9c16ec0
+Source0:	http://archive.xfce.org/src/apps/xfmpc/0.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	e6ff8563f159d1e727d656fb88964998
 URL:		http://www.xfce.org/projects/xfmpc/
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.18
 BuildRequires:	gtk+2-devel >= 2:2.14
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libmpd-devel >= 0.15.0
-BuildRequires:	libxfce4ui-devel >= 4.8.0
-BuildRequires:	libxfce4util-devel >= 4.8.0
+BuildRequires:	libxfce4ui-devel >= 4.14.0
+BuildRequires:	libxfce4util-devel >= 4.14.0
 BuildRequires:	pkgconfig >= 1:0.9.0
-BuildRequires:	xfce4-dev-tools >= 4.6.0
+BuildRequires:	xfce4-dev-tools >= 4.14.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +39,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ur_PK
+%{__rm} -r $RPM_BUILD_ROOT%{_datadir}/locale/ie
+%{__mv} $RPM_BUILD_ROOT%{_datadir}/locale/{hy_AM,hy}
 
 %find_lang %{name}
 
